@@ -1,0 +1,15 @@
+!!!!
+%html
+  %head
+    %title Chanti Vin Import
+    =javascript_include_tag :all
+
+  %body
+    #flash
+      - unless flash[:notice].nil?
+        .notice=flash[:notice]
+      - unless flash[:warning].nil?
+        .warning=flash[:warning]
+
+    =yield
+
