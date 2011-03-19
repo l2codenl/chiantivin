@@ -1,0 +1,16 @@
+%h1 Pages
+
+%ul
+  %li=link_to "new page", new_admin_page_path
+
+%table
+  %tr
+    %th Name
+    %th Options
+  - @pages.each do |page|
+    %tr
+      %td=page.title
+      %td
+        =link_to "edit", edit_admin_page_path(page)
+        =link_to "delete", admin_page_path(page), :method => "delete"
+

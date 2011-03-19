@@ -1,0 +1,17 @@
+!!!!
+%html
+  %head
+    %title Chanti Vin Import -- Admin
+    =javascript_include_tag :all
+    
+    =javascript_include_tag :ckeditor 
+
+  %body
+    #flash
+      - unless flash[:notice].nil?
+        .notice=flash[:notice]
+      - unless flash[:warning].nil?
+        .warning=flash[:warning]
+
+    =yield
+
