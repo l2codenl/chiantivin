@@ -1,8 +1,4 @@
-#contextnavigation.grid_3
-  %ul
-    -WineCategory.all.each do |category|
-      %li
-        =link_to category.title, category.url 
+= render :partial => "menu/category"
 #page.grid_9
   %h1==#{@page.title}
   = image_tag @page.banner.url(:banner)

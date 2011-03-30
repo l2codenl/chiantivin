@@ -1,5 +1,5 @@
-%h1=@wine.title
-
-= image_tag @wine.image.url(:image)
-
-=raw(@wine.body)
+= render :partial => "menu/category"
+#page.grid_9
+  %h1=@wine.title
+  = image_tag @wine.image.url(:image)
+  =raw(@wine.body)

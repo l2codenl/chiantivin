@@ -1,11 +1,12 @@
-%h1==#{@category.title}
-
-= image_tag @category.banner.url(:banner)
-
-=raw(@category.body)
-
-%h2 Wines
-
-- @wines.each do |wine|
-  =image_tag wine.image.url(:image)
-  =wine.title
+= render :partial => "menu/category"
+#page.grid_9
+  %h1==#{@category.title}
+  = image_tag @category.banner.url(:banner)
+  =raw(@category.body)
+  %h2 Wines
+  - @wines.each do |wine|
+    %div{:id => [wine.url], :class => "shopitem"}
+      .productimage
+        =link_to image_tag(wine.image.url(:image)),"/wines/#{wine.url}"
+      .producttext
+        =wine.title

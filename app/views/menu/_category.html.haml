@@ -1,0 +1,5 @@
+#contextnavigation.grid_3
+  %ul
+    -WineCategory.all.each do |category|
+      %li
+        =link_to category.title, category.url 
