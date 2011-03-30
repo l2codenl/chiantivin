@@ -33,4 +33,11 @@ class Admin::WinesController < ApplicationController
     end
   end
 
+  def destroy
+    Wine.find(params[:id]).delete
+    flash[:notice] = "The wine has been deleted."
+    redirect_to admin_wine_categories_path
+  end
+
+
 end

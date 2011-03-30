@@ -34,4 +34,11 @@ class Admin::WineCategoriesController < ApplicationController
   def edit
     @category = WineCategory.find(params[:id])
   end
+
+  def destroy
+    WineCategory.find(params[:id]).delete
+    flash[:notice] = "The category has been deleted."
+    redirect_to admin_wine_categories_path
+  end
+
 end
