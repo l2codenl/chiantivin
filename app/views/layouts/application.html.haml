@@ -3,13 +3,29 @@
   %head
     %title Chanti Vin Import
     =javascript_include_tag :all
-
+    =stylesheet_link_tag "application"
   %body
     #flash
       - unless flash[:notice].nil?
         .notice=flash[:notice]
       - unless flash[:warning].nil?
         .warning=flash[:warning]
-
-    =yield
-
+    #container
+      #header
+      #navigation
+        %ul
+          %li
+            =link_to "Webshop", "#"
+          %li
+            =link_to "Events", "#"
+          %li
+            =link_to "Vingarde", "#"
+          %li
+            =link_to "Vin & Mad", "#"
+          %li
+            =link_to "Nyhedsbrev", "#"
+          %li
+            =link_to "Kontakt", "#"
+      #main    
+        =yield
+        .clear

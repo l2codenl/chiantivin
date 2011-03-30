@@ -1,0 +1,198 @@
+body, html{
+	background: #d9d9d9 url(../images/gradient_fill.png) repeat-x;
+}
+
+/*blocks*/
+
+#header{
+	background: transparent url(../images/logo.png) no-repeat right;
+	height: 60px;
+}
+
+#navigation{
+	width: 100%;
+	height: 20px;
+	clear: both;
+	background-color: white;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	padding: 7px 0px 2px 0px;
+	box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
+	margin: 10px 0px 10px 0px;
+	behavior: url(path/to/PIE.htc);
+}
+
+#main{
+	width: 100%;
+	height: auto;
+	clear: both;
+	background-color: white;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	padding: 5px 0px 5px 0px;
+	box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
+	margin: 10px 0px 10px 0px;
+	behavior: url(path/to/PIE.htc);
+}
+
+#contextnavigation{
+	float: left; 
+	padding: 5px 0px 5px 0px;
+}
+
+#fpwine{
+	margin: 10px auto;
+	width: 900px;
+	height: 330px;
+}
+
+.fpwine{
+	width: 168px;
+	height: 320px;
+	float: left;
+	margin: 0 5px;
+}
+
+.fpwineimg{
+	border: black 1px solid;
+	height: 290px;
+	overflow: hidden;
+}
+
+#fptext{
+	width: 580px;
+	height: auto;
+	margin: 50px auto;
+}
+
+#shop{
+	height: auto;
+	width: 100%;
+}
+
+.shopitem{
+	float: left;
+	width: 270px;
+	height: 140px;
+	border: 1px solid black;
+	box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
+	margin: 10px;
+}
+
+.shopitem .image{
+	
+}
+
+.shopitem .text{
+
+}
+
+/*lists*/
+
+#navigation ul li{
+	float: left;
+	width: 16%;
+	text-align: center;
+}
+
+#contextnavigation ul li{
+	padding: 5px 0 0 0;
+}
+
+#contextnavigation ul li ul li{
+	margin-left: 20px;
+	padding: 5px 0 0 0;
+}
+
+/*typography*/
+body{
+	font-family: Georgia, Times New Roman, serif;
+	font-size: 100%;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+	font-weight: bold;
+}
+
+h1{
+	font-size: 2em;
+}
+
+h2{
+	font-size: 1.6em;
+}
+
+h3{
+	font-size: 1.4em;
+}
+
+h4{
+	font-size: 1.2em;
+}
+
+h5{
+	font-size: 1em;
+}
+
+h6{
+	font-size: 0.9em;
+}
+
+#navigation{
+	font-weight: bold;
+	font-style: italic;
+}
+
+#contextnavigation ul li ul li{
+	font-style: italic;
+}
+
+#contextnavigation ul li.select
+{
+	font-weight: bold;
+}
+
+#contextnavigation ul li.select ul li{
+	font-weight: normal;
+}
+
+#contextnavigation ul li ul li.select{
+	font-weight: bold;
+}
+
+p{
+	line-height: 1.7em;
+	margin: 10px 0px 10px 0px;
+}
+
+.fpwine{
+	text-align: center;
+}
+
+/*input*/
+
+
+/*links*/
+
+#navigation a{
+	color: #000;
+	text-decoration: none;
+}
+
+#navigation a:hover{
+	color: #797979;
+}
+
+#contextnavigation a{
+	color: #000;
+	text-decoration: none;
+}
+
+#contextnavigation a:hover{
+	color: #797979;
+}
+
+/*misc*/
