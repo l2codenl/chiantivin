@@ -1,11 +1,36 @@
 class Admin::WinesController < ApplicationController
+  layout "admin"
+
   def new
     @categories = WineCategory.all
     @wine = Wine.new
   end
 
   def create
-    #continue here.
+    category = WineCategory.find(params[:wine_category][:id])
+    wine = category.wines.new(params[:wine])
+    if wine.save
+      flash[:notice] = "A new wine has been saved."
+      redirect_to admin_wine_categories_path
+    else
+      flash[:warning] = "Something went wrong."
+      redirect_to new_admin_wine_path
+    end
+  end
+
+  def edit
+    @wine = Wine.find(params[:id])
+  end
+
+  def update
+    wine = Wine.find(params[:id])
+    if wine.update_attributes(params[:wine])
+      flash[:notice] = "A wine has been saved."
+      redirect_to admin_wine_categories_path
+    else
+      flash[:warning] = "Something went wrong."
+      redirect_to edit_admin_wine_path(wine)
+    end
   end
 
 end
