@@ -1,0 +1,2 @@
+module Wines::CategoriesHelper
+end
