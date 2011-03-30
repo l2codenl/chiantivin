@@ -6,6 +6,6 @@ class ApplicationController < ActionController::Base
   end
 
   def authorize
-    redirect_to login_admin_index_path unless admin?
+    #redirect_to login_admin_index_path unless admin?
   end
 end
