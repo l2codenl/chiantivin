@@ -12,8 +12,17 @@
   - @categories.each do |category|
     %tr
       %td=category.title
-      %td=category.wines.count
+      %td
       %td
         =link_to "edit", edit_admin_wine_category_path(category)
         =link_to "delete", admin_wine_category_path(category), :method => "delete"
+    - if category.wines.count > 0 
+      - category.wines.each do |wine|
+        %tr
+          %td=""
+          %td=wine.title
+          %td
+            =link_to "edit", edit_admin_wine_path(wine)
+            =link_to "delete", admin_wine_path(wine), :method => "delete"
+
 

@@ -1,0 +1,11 @@
+%h1==#{@category.title}
+
+= image_tag @category.banner.url(:banner)
+
+=raw(@category.body)
+
+%h2 Wines
+
+- @wines.each do |wine|
+  =image_tag wine.image.url(:image)
+  =wine.title
