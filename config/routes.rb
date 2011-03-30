@@ -38,7 +38,6 @@ Chianti::Application.routes.draw do
   #       get 'recent', :on => :collection
   #     end
   #   end
-
   namespace :admin do
     resources :wines
     resources :wine_categories do
@@ -52,6 +51,13 @@ Chianti::Application.routes.draw do
       member do
         get 'remove_banner'
       end
+    end
+  end
+
+  resources :admin do
+    collection do
+      get :login
+      post :login_submit
     end
   end
 

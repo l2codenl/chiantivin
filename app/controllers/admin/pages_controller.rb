@@ -1,4 +1,6 @@
 class Admin::PagesController < ApplicationController
+  before_filter :authorize
+
   layout "admin"
 
   def index

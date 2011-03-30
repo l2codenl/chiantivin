@@ -12,6 +12,10 @@
         .notice=flash[:notice]
       - unless flash[:warning].nil?
         .warning=flash[:warning]
+    - if session[:admin]
+      %ul#menu
+        %li=link_to  "pages", admin_pages_path
+        %li=link_to  "wines", admin_wine_categories_path
 
     =yield
 
