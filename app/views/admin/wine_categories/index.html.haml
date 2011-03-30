@@ -1,0 +1,19 @@
+%h1 Wines
+
+%ul
+  %li=link_to "new category", new_admin_wine_category_path
+  %li=link_to "new wine", new_admin_wine_path
+
+%table
+  %tr
+    %th Category
+    %th Title
+    %th Options
+  - @categories.each do |category|
+    %tr
+      %td=category.title
+      %td=category.wines.count
+      %td
+        =link_to "edit", edit_admin_wine_category_path(category)
+        =link_to "delete", admin_wine_category_path(category), :method => "delete"
+

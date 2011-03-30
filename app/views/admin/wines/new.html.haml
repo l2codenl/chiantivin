@@ -1,0 +1,13 @@
+%h1 New Wines
+
+= form_for [:admin,@wine], :html => { :multipart => true } do |f|
+  %p
+    =f.label :title
+    =f.text_field :title
+  %p
+    =f.label :image
+    =f.file_field :image
+  %p
+    =f.label :body
+    =f.ckeditor_textarea("body", :width => '100%', :height => '200px')
+  =f.submit "save"

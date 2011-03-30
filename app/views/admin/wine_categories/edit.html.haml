@@ -1,0 +1,17 @@
+%h1==Edit the category #{@category.title}
+
+= form_for [:admin,@category], :html => { :multipart => true } do |f|
+  %p
+    =f.label :title
+    =f.text_field :title
+  %p
+    =f.label :banner
+    =f.file_field :banner
+  - unless @category.banner_file_name.nil?
+    %p
+      =link_to "current", @category.banner.url(:banner) 
+      =link_to "delete banner", remove_banner_admin_wine_category_path(@category)
+  %p
+    =f.label :body
+    =f.cktext_area :body, :toolbar=>'Full', :width=>'100%', :heigth=>'200px'
+  =f.submit "save"

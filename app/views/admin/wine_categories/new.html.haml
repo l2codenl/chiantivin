@@ -1,0 +1,13 @@
+%h1 New category
+
+= form_for [:admin,@category], :html => { :multipart => true } do |f|
+  %p
+    =f.label :title
+    =f.text_field :title
+  %p
+    =f.label :banner
+    =f.file_field :banner
+  %p
+    =f.label :body
+    =ckeditor_textarea("wine_category", "body", :width => '100%', :height => '200px')
+  =f.submit "save"

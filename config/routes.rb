@@ -40,7 +40,15 @@ Chianti::Application.routes.draw do
   #   end
 
   namespace :admin do
-    resources :pages do 
+    resources :wines
+    resources :wine_categories do
+      member do
+        get 'remove_banner'
+      end
+      resources :wines
+    end
+
+    resources :pages do
       member do
         get 'remove_banner'
       end
