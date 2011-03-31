@@ -8,8 +8,8 @@ gem 'rails', '3.0.5'
 gem 'sqlite3'
 
 gem 'haml'
-gem 'devise'
 
+gem 'jquery-rails'
 gem 'ruby-debug'
 gem 'ckeditor'
 gem 'paperclip'
