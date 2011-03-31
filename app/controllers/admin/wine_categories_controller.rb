@@ -42,4 +42,10 @@ class Admin::WineCategoriesController < ApplicationController
     redirect_to admin_wine_categories_path
   end
 
+  def remove_banner
+    category = WineCategory.find(params[:id])
+    category.update_attribute(:banner,nil)
+    flash[:notice] = "The banner has been deleted"
+    redirect_to edit_admin_wine_category_path(category)
+  end
 end
