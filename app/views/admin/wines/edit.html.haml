@@ -1,4 +1,6 @@
-%h1 Edit Wines
+%h1== Edit the wine #{@wine.title}
+
+=link_to "View in website", "/wines/#{@wine.url}"
 
 = form_for [:admin,@wine], :html => { :multipart => true } do |f|
   %p
