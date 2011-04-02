@@ -9,4 +9,5 @@ class Wine < ActiveRecord::Base
   def save_title_to_url
     self.url = self.title.downcase.gsub(/[^a-z0-9]+/i, '-')
   end
+
 end
