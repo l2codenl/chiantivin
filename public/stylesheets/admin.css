@@ -11,3 +11,25 @@ body{
   font-size: 100%;
   font-family: Trebuchet, Verdana, Sans-Serif;
 }
+
+#content{
+  float: right;
+}
+
+.notice{
+  color: #3CCF52;
+  background: #DEFAE3;
+  border: 1px solid #3CCF52;
+  width: auto;
+  clear: both;
+  padding: 5px;
+}
+
+.warning{
+  color: #F2E11F;
+  background: #FAFADE;
+  border: 1px solid #F2E11F;
+  width: auto;
+  clear: both;
+  padding: 5px;
+}

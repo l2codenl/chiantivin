@@ -9,13 +9,17 @@
     #container
       #flash
         - unless flash[:notice].nil?
-          .notice=flash[:notice]
+          .notice
+            =image_tag("icons/accept.png")
+            =flash[:notice]
+            
         - unless flash[:warning].nil?
-          .warning=flash[:warning]
-      - if session[:admin]
-        %ul#menu
-          %li=link_to  "pages", admin_pages_path
-          %li=link_to  "wines", admin_wine_categories_path
+          .warning
+            =image_tag("icons/error.png")
+            =flash[:warning]
+      %ul#menu
+        %li=link_to  "pages", admin_pages_path
+        %li=link_to  "wines", admin_wine_categories_path
       #content.grid_9
         =yield
 
