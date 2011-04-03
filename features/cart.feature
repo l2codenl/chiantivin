@@ -16,9 +16,14 @@ Feature: Placing wine in a cart
     And I select another wine to be bought
     Then I should have both wines in the cart
 
-  #@wip
   Scenario: Adding 2 of the same wines to the cart
     Given there is a wine
     When I select a wine to be bought
     And  I select a wine to be bought
     Then I should have 2 of that wine in my cart
+    
+  Scenario: Removing a wine from the cart
+    Given there is a wine
+    And I select a wine to be bought
+    When I remove the wine from the cart
+    Then I should no wines in my cart

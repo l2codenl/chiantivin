@@ -16,6 +16,17 @@ class CartsController < ApplicationController
     redirect_to cart_path
   end
 
+  def destroy
+    wine = Wine.find_by_url!(params[:wine_id])
+    if cart_line = Cart.find_by_session_id_and_wine(session_id, wine)
+      flash[:notice] = "#{cart_line.wine.title} has been removed from your cart"
+      cart_line.delete
+    else
+      flash[:warning] = "Something went wrong"
+    end
+    redirect_to cart_path
+  end
+
   private
 
   def session_id

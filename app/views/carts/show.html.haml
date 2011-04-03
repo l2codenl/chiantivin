@@ -4,7 +4,9 @@
   %tr
     %th Title
     %th Quantity
+    %th Options
   - @cart_lines.each do |cart_line|
     %tr[cart_line]
-      %td= cart_line.wine.title
-      %td= cart_line.quantity
+      %td=cart_line.wine.title
+      %td=cart_line.quantity
+      %td=link_to "remove", wine_cart_path(cart_line.wine), :method => :delete

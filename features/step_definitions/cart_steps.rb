@@ -41,4 +41,15 @@ Then /^I should have (\d+) of that wine in my cart$/ do |arg1|
   
 end
 
+When /^I remove the wine from the cart$/ do
+  within "#cart" do
+    click_on "remove"
+  end
+end
+
+Then /^I should no wines in my cart$/ do
+  within "#cart" do
+    page.should_not have_content(@wine.title)
+  end
+end
 
