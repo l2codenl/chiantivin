@@ -9,7 +9,45 @@
 
 body{
   font-size: 100%;
-  font-family: Trebuchet, Verdana, Sans-Serif;
+  font-family: trebuchet, verdana, sans-serif;
+  color: #444;
+  background: #EBEBE6;
+}
+
+h1{
+  font-size: 2em;
+}
+
+a:link, a:visited{
+  color: #BC0F40;
+  text-decoration: none;
+}
+
+a:hover{
+  color: #D94A72;
+}
+
+#menu ul li{
+  padding: 5px;
+  text-transform: capitalize;
+}
+
+#header{
+  width: 960px;  
+  margin: 0 auto;
+  padding: 10px 0 10px 0;
+}
+
+#header h1{
+  color: #9D9D89;
+  text-shadow: 0 1px 0 white;
+}
+
+#container{
+  background: white;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
 }
 
 #content{

@@ -6,6 +6,8 @@
     =javascript_include_tag :ckeditor 
     =stylesheet_link_tag "admin"
   %body
+    #header
+      %h1 Chianti Vinimport Dashboard
     #container
       #flash
         - unless flash[:notice].nil?
@@ -17,9 +19,11 @@
           .warning
             =image_tag("icons/error.png")
             =flash[:warning]
-      %ul#menu
-        %li=link_to  "pages", admin_pages_path
-        %li=link_to  "wines", admin_wine_categories_path
+      #menu.grid_3
+        %ul
+          %li=link_to  "Pages", admin_pages_path
+          %li=link_to  "Wines", admin_wine_categories_path
       #content.grid_9
         =yield
+      .clear
 
