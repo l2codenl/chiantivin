@@ -1,28 +1,28 @@
 %h1 Wines
-
 %ul
-  %li=link_to "new category", new_admin_wine_category_path
-  %li=link_to "new wine", new_admin_wine_path
+  %li=link_to "New category", new_admin_wine_category_path
+  %li=link_to "New wine", new_admin_wine_path
 
 %table
-  %tr
+  %tr{:style => "border-bottom: 1px solid #666;"}
     %th Category
-    %th Title
+    %th Wine title
     %th Options
   - @categories.each do |category|
     %tr
-      %td=category.title
+      %td{:style => "width: 180px;"}
+        %strong=category.title
       %td
       %td
-        =link_to "edit", edit_admin_wine_category_path(category)
-        =link_to "delete", admin_wine_category_path(category), :method => "delete"
+        =link_to "Edit", edit_admin_wine_category_path(category)
+        =link_to "Delete", admin_wine_category_path(category), :method => "delete"
     - if category.wines.count > 0 
       - category.wines.each do |wine|
         %tr
           %td=""
           %td=wine.title
           %td
-            =link_to "edit", edit_admin_wine_path(wine)
-            =link_to "delete", admin_wine_path(wine), :method => "delete"
+            =link_to "Edit", edit_admin_wine_path(wine)
+            =link_to "Delete", admin_wine_path(wine), :method => "delete"
 
 

@@ -1,0 +1,96 @@
+
+/* COPYRIGHT CHIANTI VINIMPORT 
+    Author L2code.nl
+    Owner Chianti Vinimport
+*/
+
+@import url(reset.css);
+@import url(960.css);
+
+body{
+  font-size: 100%;
+  font-family: trebuchet, verdana, sans-serif;
+  color: #444;
+  background: #EBEBE6;
+}
+
+h1{
+  font-size: 2em;
+}
+
+a:link, a:visited{
+  color: #BC0F40;
+  text-decoration: none;
+}
+
+a:hover{
+  color: #D94A72;
+}
+
+#menu ul li{
+  padding: 5px;
+  text-transform: capitalize;
+}
+
+#header{
+  width: 960px;  
+  margin: 0 auto;
+  padding: 10px 0 10px 0;
+}
+
+#header h1{
+  color: #9D9D89;
+  text-shadow: 0 1px 0 white;
+}
+
+#container{
+  background: white;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
+  font-size: 0.9em;
+  padding: 15px 0 15px 0;
+}
+
+#content{
+  float: right;
+}
+#content table{
+  width: 100%;
+}
+#content table th{
+  font-weight: bold;
+  text-align: left;
+}
+
+#content table th, #content table td{
+  padding: 4px;
+}
+
+
+#footer{
+  width: 960px;  
+  margin: 0 auto;
+  padding: 10px 0 10px 0;
+  color: #9D9D89;
+  text-shadow: 0 1px 0 white;
+}
+
+.notice{
+  color: #3CCF52;
+  background: #DEFAE3;
+  border: 1px solid #3CCF52;
+  width: auto;
+  clear: both;
+  padding: 5px;
+}
+
+.warning{
+  color: #F2E11F;
+  background: #FAFADE;
+  border: 1px solid #F2E11F;
+  width: auto;
+  clear: both;
+  padding: 5px;
+}
