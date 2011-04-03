@@ -4,13 +4,14 @@
   %li=link_to "New wine", new_admin_wine_path
 
 %table
-  %tr
+  %tr{:style => "border-bottom: 1px solid #666;"}
     %th Category
-    %th Title
+    %th Wine title
     %th Options
   - @categories.each do |category|
     %tr
-      %td=category.title
+      %td{:style => "width: 180px;"}
+        %strong=category.title
       %td
       %td
         =link_to "Edit", edit_admin_wine_category_path(category)
