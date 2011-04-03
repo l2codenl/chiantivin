@@ -10,13 +10,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110403210120) do
+ActiveRecord::Schema.define(:version => 20110403213916) do
 
   create_table "carts", :force => true do |t|
     t.integer  "wine_id"
     t.string   "session_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "quantity"
   end
 
   create_table "pages", :force => true do |t|

@@ -6,8 +6,14 @@ class CartsController < ApplicationController
 
   def create
     wine = Wine.find_by_url!(params[:wine_id])
-    Cart.create!(:wine => wine, :session_id => session_id)
-    redirect_to cart_path, :notice => "#{wine.title} has been added to your cart"
+    if cart = Cart.find(:first, :conditions => ["session_id = ? AND wine_id = ?", session_id, wine.id])
+      cart.update_attribute(:quantity,cart.quantity + 1)
+      flash[:notice] = "Another #{wine.title} has been added to your cart"
+    else
+      Cart.create!(:wine => wine, :session_id => session_id, :quantity => 1)
+      flash[:notice] = "#{wine.title} has been added to your cart"
+    end
+    redirect_to cart_path
   end
 
   private

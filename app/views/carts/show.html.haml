@@ -1,5 +1,10 @@
 %h1 Cart
 
-%ul#cart
+%table#cart
+  %tr
+    %th Title
+    %th Quantity
   - @cart_lines.each do |cart_line|
-    %li[cart_line]= cart_line.wine.title
+    %tr[cart_line]
+      %td= cart_line.wine.title
+      %td= cart_line.quantity

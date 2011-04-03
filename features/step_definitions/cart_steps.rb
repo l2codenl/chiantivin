@@ -32,3 +32,13 @@ Then /^I should have both wines in the cart$/ do
   end
 end
 
+Then /^I should have (\d+) of that wine in my cart$/ do |arg1|
+  page.should have_content("Another #{@wine.title} has been added to your cart")
+  within "#cart" do
+    page.should have_content(@wine.title)
+    page.should have_content("2")
+  end
+  
+end
+
+
