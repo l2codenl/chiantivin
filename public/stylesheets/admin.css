@@ -1,0 +1,13 @@
+
+/* COPYRIGHT CHIANTI VINIMPORT 
+    Author L2code.nl
+    Owner Chianti Vinimport
+*/
+
+@import url(reset.css);
+@import url(960.css);
+
+body{
+  font-size: 100%;
+  font-family: Trebuchet, Verdana, Sans-Serif;
+}
