@@ -1,0 +1,5 @@
+%h1 Cart
+
+%ul#cart
+  - @cart_lines.each do |cart_line|
+    %li[cart_line]= cart_line.wine.title

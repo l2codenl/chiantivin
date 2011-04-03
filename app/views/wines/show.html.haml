@@ -4,6 +4,4 @@
   = image_tag @wine.image.url(:image)
   =raw(@wine.body)
   .shop
-    =form_for(@wine, :url => cart_path(Wine.new)) do |f|
-      %p
-        =text_field_tag :quantity
+    =link_to "add to cart", wine_cart_path(@wine), :method => :post

@@ -10,4 +10,8 @@ class Wine < ActiveRecord::Base
     self.url = self.title.downcase.gsub(/[^a-z0-9]+/i, '-')
   end
 
+  def to_param
+    url
+  end
+
 end

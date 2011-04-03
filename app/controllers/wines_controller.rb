@@ -1,8 +1,7 @@
 class WinesController < ApplicationController
+
   def show
-    @wine = Wine.first(:conditions => ['url = ?', params[:title].downcase])
-    if @wine.nil?
-      redirect_to :root
-    end
+    @wine = Wine.find_by_url!(params[:id])
   end
+
 end
