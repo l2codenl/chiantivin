@@ -10,7 +10,7 @@ class AdminController < ApplicationController
   def login_submit
     if params[:username] == "admin" && params[:password] == "welkom123"
       flash[:notice] = "Welcome."
-      session[:admin] = true
+      cookies[:admin] = true
       redirect_to admin_index_path
     else
       flash[:warning] = "Something went wrong."
