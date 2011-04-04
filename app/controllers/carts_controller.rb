@@ -30,7 +30,7 @@ class CartsController < ApplicationController
   private
 
   def session_id
-    session[:session_id] ||= rand(16**36).to_s(36)
+    cookies[:session_id] ||= rand(16**36).to_s(36)
   end
 
 end
