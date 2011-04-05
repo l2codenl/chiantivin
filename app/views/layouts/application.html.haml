@@ -5,13 +5,8 @@
     =javascript_include_tag :all
     =stylesheet_link_tag "application"
   %body
-    #flash
-      - unless flash[:notice].nil?
-        .notice=flash[:notice]
-      - unless flash[:warning].nil?
-        .warning=flash[:warning]
     #container
-      =session.inspect
+      //=session.inspect
       #header
       #navigation
         %ul
@@ -27,6 +22,15 @@
             =link_to "Nyhedsbrev", "#"
           %li
             =link_to "Kontakt", "#"
-      #main    
+      #main
+        #flash
+          - unless flash[:notice].nil?
+            .notice
+              =image_tag("icons/accept.png")
+              =flash[:notice]
+          - unless flash[:warning].nil?
+            .warning
+              =image_tag("icons/error.png")
+              =flash[:warning]
         =yield
         .clear
