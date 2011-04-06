@@ -10,17 +10,12 @@
       #navigation
         %ul
           %li
-            =link_to "Webshop", "#"
+            =link_to "Webshop", wines_path 
+          -@menu.each do |menu|
+            %li
+              =link_to menu.title, menu.url
           %li
-            =link_to "Events", "#"
-          %li
-            =link_to "Vingarde", "#"
-          %li
-            =link_to "Vin & Mad", "#"
-          %li
-            =link_to "Nyhedsbrev", "#"
-          %li
-            =link_to "Kontakt", "#"
+            =link_to "Kontakt", "#" 
       #main
         #flash
           - unless flash[:notice].nil?

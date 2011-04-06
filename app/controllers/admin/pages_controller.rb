@@ -17,7 +17,7 @@ class Admin::PagesController < ApplicationController
       flash[:notice] = "The new page has been saved."
       redirect_to admin_pages_path
     else
-      flash[:warning] = "Something went wrong."
+      flash[:warning] = t(:error)
       redirect_to new_admin_page_path
     end
   end
@@ -32,7 +32,7 @@ class Admin::PagesController < ApplicationController
       flash[:notice] = "The page has been updated."
       redirect_to admin_pages_path
     else
-      flash[:warning] = "Something went wrong."
+      flash[:warning] = t(:error)
       redirect_to edit_admin_page_path(page)
     end
   end
@@ -42,7 +42,7 @@ class Admin::PagesController < ApplicationController
     if page.delete
       flash[:notice] = "The page has been deleted."
     else
-      flash[:warning] = "Something went wrong."
+      flash[:warning] = t(:error)
     end
     redirect_to admin_pages_path
   end
