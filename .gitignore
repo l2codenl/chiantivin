@@ -1,6 +1,7 @@
 .bundle
 public/system/*
 *.swp
+*.swo
 db/*.sqlite3
 log/*.log
 tmp/

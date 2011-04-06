@@ -7,6 +7,7 @@ gem 'jquery-rails'
 gem 'ckeditor'
 gem 'paperclip'
 gem 'rmagick'
+gem 'i18n'
 
 group :development, :test do
   gem 'ruby-debug'
