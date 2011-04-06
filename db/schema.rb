@@ -20,6 +20,19 @@ ActiveRecord::Schema.define(:version => 20110406181135) do
     t.integer  "quantity"
   end
 
+  create_table "orders", :force => true do |t|
+    t.string   "firstname"
+    t.string   "surname"
+    t.string   "address"
+    t.string   "postalcode"
+    t.string   "email"
+    t.string   "accountnumber"
+    t.string   "accountowner"
+    t.integer  "ordernumber"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "pages", :force => true do |t|
     t.string   "title"
     t.text     "body"
