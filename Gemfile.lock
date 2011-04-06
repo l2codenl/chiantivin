@@ -59,6 +59,8 @@ GEM
     culerity (0.2.15)
     database_cleaner (0.6.4)
     diff-lcs (1.1.2)
+    email_spec (1.1.1)
+      rspec (~> 2.0)
     erubis (2.6.6)
       abstract (>= 1.0.0)
     factory_girl (1.3.3)
@@ -152,6 +154,7 @@ DEPENDENCIES
   ckeditor
   cucumber-rails
   database_cleaner
+  email_spec
   factory_girl_rails
   haml
   i18n

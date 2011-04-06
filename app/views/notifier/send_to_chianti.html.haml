@@ -1,0 +1,41 @@
+!!!
+%html
+  %body
+    %h1== New order from #{@order.firstname} #{@order.surname}: #{@order.ordernumber}
+    %table
+      %tr
+        %td Firstname
+        %td=@order.firstname
+      %tr
+        %td Surname
+        %td=@order.surname
+      %tr
+        %td Address
+        %td=@order.address
+      %tr
+        %td Postalcode
+        %td=@order.postalcode
+      %tr
+        %td Email
+        %td=@order.email
+      %tr
+        %td Accountnumber
+        %td=@order.accountnumber
+      %tr
+        %td Accountowner
+        %td=@order.accountowner
+      %tr
+        %td Ordernumber
+        %td="%06d" % @order.ordernumber
+
+    %table
+      %tr
+        %th Title
+        %th Price
+        %th Quantity
+      - @order.cart.each do |cartline|
+        %tr
+          %td=cartline.wine.title
+          %td=cartline.wine.price
+          %td=cartline.quantity
+

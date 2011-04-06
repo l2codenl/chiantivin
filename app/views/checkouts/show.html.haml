@@ -1,0 +1,14 @@
+%h1 Checkout
+
+%table#checkut
+  %tr
+    %th Title
+    %th Quantity
+  - @cart_lines.each do |cart_line|
+    %tr[cart_line]
+      %td=cart_line.wine.title
+      %td=cart_line.quantity
+
+=link_to 'edit', cart_path
+|
+=link_to 'continue', details_cart_checkout_path

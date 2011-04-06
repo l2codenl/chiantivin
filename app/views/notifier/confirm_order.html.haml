@@ -1,0 +1,17 @@
+!!!
+%html
+  %body
+    %h1 Thank you for placing the order. 
+
+
+    %table
+      %tr
+        %th Title
+        %th Price
+        %th Quantity
+      - @order.cart.each do |cartline|
+        %tr
+          %td=cartline.wine.title
+          %td=cartline.wine.price
+          %td=cartline.quantity
+

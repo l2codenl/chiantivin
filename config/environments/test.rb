@@ -32,4 +32,5 @@ Chianti::Application.configure do
 
   # Print deprecation notices to the stderr
   config.active_support.deprecation = :stderr
+  require 'email_spec/cucumber'
 end

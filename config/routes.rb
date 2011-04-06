@@ -23,7 +23,15 @@ Chianti::Application.routes.draw do
     end
   end
 
-  resource :cart
+  resource :cart do 
+    resource :checkout do
+      member do
+        get :details
+        get :success
+      end
+      resources :orders
+    end
+  end
 
   match '/wines/category/:title', :controller => "wines/categories", :action => :show
 
