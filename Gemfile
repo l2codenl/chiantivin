@@ -11,6 +11,7 @@ gem 'rmagick'
 group :development, :test do
   gem 'ruby-debug'
   gem 'rspec-rails'
+	gem 'email_spec'
   gem 'cucumber-rails'
   gem 'capybara'
   gem 'launchy'

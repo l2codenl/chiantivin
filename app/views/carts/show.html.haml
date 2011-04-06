@@ -13,3 +13,5 @@
           =f.select 'quantity', options_for_select((1..20).collect {|t| [t,t]}, cart_line.quantity), {}, { :id => "cart_quantity[#{cart_line.wine_id}]" }
           =f.hidden_field :wine_id
       %td=link_to "remove", wine_cart_path(cart_line.wine), :method => :delete
+
+=link_to 'checkout', cart_checkout_path

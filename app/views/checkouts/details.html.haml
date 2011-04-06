@@ -1,0 +1,25 @@
+%h1 Details
+
+= form_for [:cart,:checkout,@order] do |f|
+  %p
+    =f.label :firstname
+    =f.text_field :firstname
+  %p
+    =f.label :surname
+    =f.text_field :surname
+  %p
+    =f.label :address
+    =f.text_field :address
+  %p
+    =f.label :postalcode
+    =f.text_field :postalcode
+  %p
+    =f.label :email
+    =f.email_field :email
+  %p
+    =f.label :accountnumber
+    =f.text_field :accountnumber
+  %p
+    =f.label :accountowner
+    =f.text_field :accountowner
+  =f.submit "Submit"
