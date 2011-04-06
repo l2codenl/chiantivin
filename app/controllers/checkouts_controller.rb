@@ -1,5 +1,6 @@
 class CheckoutsController < ApplicationController
   def success
+    Cart.delete_all("session_id = \"#{session_id}\"") 
   end
 
   def show
