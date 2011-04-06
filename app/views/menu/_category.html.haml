@@ -2,4 +2,10 @@
   %ul
     -WineCategory.all.each do |category|
       %li
-        =link_to category.title, "/wines/category/" + category.url  
+        =link_to category.title, "/wines/category/"+category.url
+        -if !@current_category.nil? && @current_category == category.id
+          %ul
+            -Wine.find_all_by_wine_category_id(category.id).each do |wine|
+              %li
+                =link_to wine.title, "/wines/"+wine.url
+
