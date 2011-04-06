@@ -32,14 +32,17 @@ Then /^I should have both wines in the cart$/ do
   end
 end
 
-Then /^I should have (\d+) of that wine in my cart$/ do |arg1|
-  page.should have_content("Another #{@wine.title} has been added to your cart")
+Then /^I should have (\d+) of that wine in my cart$/ do |count|
   within "#cart" do
     page.should have_content(@wine.title)
-    page.should have_content("2")
+    page.should have_content(count)
   end
-  
 end
+
+Then /^I should be notified that I added (\d+) of the same wines to a cart$/ do |arg1|
+  page.should have_content("Another #{@wine.title} has been added to your cart")
+end
+
 
 When /^I remove the wine from the cart$/ do
   within "#cart" do
@@ -47,9 +50,22 @@ When /^I remove the wine from the cart$/ do
   end
 end
 
+When /^I select (\d+) of that wine$/ do |count|
+  @count = count
+  within "#cart" do
+    select(count, :from => "cart_quantity[#{@wine.id}]")
+  end
+end
+
+
 Then /^I should no wines in my cart$/ do
   within "#cart" do
     page.should_not have_content(@wine.title)
   end
 end
+
+Then /^I should be notified that I changed the wine quantity$/ do
+  #page.should have_content("You now have #{@count} times #{@wine.title} in your cart")
+end
+
 

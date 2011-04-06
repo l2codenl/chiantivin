@@ -8,5 +8,8 @@
   - @cart_lines.each do |cart_line|
     %tr[cart_line]
       %td=cart_line.wine.title
-      %td=cart_line.quantity
+      %td.quantity
+        =form_for cart_line do |f|
+          =f.select 'quantity', options_for_select((1..20).collect {|t| [t,t]}, cart_line.quantity), {}, { :id => "cart_quantity[#{cart_line.wine_id}]" }
+          =f.hidden_field :wine_id
       %td=link_to "remove", wine_cart_path(cart_line.wine), :method => :delete
