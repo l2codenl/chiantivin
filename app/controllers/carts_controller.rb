@@ -8,10 +8,10 @@ class CartsController < ApplicationController
     wine = Wine.find_by_url!(params[:wine_id])
     if cart = Cart.find(:first, :conditions => ["session_id = ? AND wine_id = ?", session_id, wine.id])
       cart.update_attribute(:quantity,cart.quantity + 1)
-      flash[:notice] = "Another #{wine.title} has been added to your cart"
+      flash[:notice] = t(:anotheradd, :scope => :cart ,:wine => wine.title)
     else
       Cart.create!(:wine => wine, :session_id => session_id, :quantity => 1)
-      flash[:notice] = "#{wine.title} has been added to your cart"
+      flash[:notice] = t(:add, :scope => :cart ,:wine => wine.title)
     end
     redirect_to cart_path
   end
@@ -19,10 +19,10 @@ class CartsController < ApplicationController
   def destroy
     wine = Wine.find_by_url!(params[:wine_id])
     if cart_line = Cart.find_by_session_id_and_wine(session_id, wine)
-      flash[:notice] = "#{cart_line.wine.title} has been removed from your cart"
+      flash[:notice] = t(:remove, :scope => :cart ,:wine => wine.title) 
       cart_line.delete
     else
-      flash[:warning] = "Something went wrong"
+      flash[:warning] = t(:error) 
     end
     redirect_to cart_path
   end
@@ -33,7 +33,7 @@ class CartsController < ApplicationController
 
     cart_line = Cart.find_by_session_id_and_wine(session_id, wine)
     if cart_line.update_attribute(:quantity,quantity)
-      flash[:notice] = "You now have #{quantity} times #{wine.title} in your cart"
+      flash[:notice] = t(:quantity, :scope => :cart ,:wine => wine.title, :quantity => quantity)
     end
 
     redirect_to cart_path

@@ -2,5 +2,10 @@
 # See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  welcome: "Welcome."
   error: "Something went wrong."
+  cart:
+    anotheradd: "Another %{wine} has been added to your cart"
+    add: "%{wine} has been added to your cart"
+    remove: "%{wine} has been removed from your cart"
+    quantity: "You now have %{quantity} times %{wine} in your cart"
