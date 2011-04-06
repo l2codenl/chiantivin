@@ -27,6 +27,18 @@ class CartsController < ApplicationController
     redirect_to cart_path
   end
 
+  def update
+    wine = Wine.find(params[:cart][:wine_id])
+    quantity = params[:cart][:quantity]
+
+    cart_line = Cart.find_by_session_id_and_wine(session_id, wine)
+    if cart_line.update_attribute(:quantity,quantity)
+      flash[:notice] = "You now have #{quantity} times #{wine.title} in your cart"
+    end
+
+    redirect_to cart_path
+  end
+
   private
 
   def session_id

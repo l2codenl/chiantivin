@@ -21,9 +21,18 @@ Feature: Placing wine in a cart
     When I select a wine to be bought
     And  I select a wine to be bought
     Then I should have 2 of that wine in my cart
+		And I should be notified that I added 2 of the same wines to a cart
     
   Scenario: Removing a wine from the cart
     Given there is a wine
     And I select a wine to be bought
     When I remove the wine from the cart
     Then I should no wines in my cart
+	
+	Scenario: Changing the quantity of the wine selected in a cart
+		Given there is a wine
+		And I select a wine to be bought
+		When I select 5 of that wine
+		Then I should have 5 of that wine in my cart
+		And I should be notified that I changed the wine quantity
+
