@@ -15,7 +15,11 @@ en:
   save: "save"
   edit: "edit"
   delete: "delete"
+  name: "name"
+  email: "email"
+  body: "body"
   title: "title"
+  submit: "submit"
   quantity: "quantity"
   options: "options"
   remove: "remove"
@@ -50,4 +54,8 @@ en:
       options: "Options"
   order:
     create: "Your order has succesfully been send"
-
+  contact:
+    success: "We've received your message. Thank you and we'll get back to you as soon as possible."
+    fail: "Something went wrong. All fields are required."
+    title: "Contact"
+    question: "question"

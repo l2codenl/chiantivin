@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
   before_filter :menu_pages
+
   def admin?
     cookies[:admin]
   end

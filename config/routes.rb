@@ -39,6 +39,8 @@ Chianti::Application.routes.draw do
     resource :cart
   end
 
+  resource :contact
+
   match ':title', :controller => :pages, :action => :show
 
   root :to => "pages#index"
