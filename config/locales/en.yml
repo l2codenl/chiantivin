@@ -21,3 +21,25 @@ en:
     update: "The page has been updated."
     delete: "The page has been deleted."
     deletebanner: "The page banner has been deleted"
+  wine:
+    category:
+      title: 
+        index: "Wines"
+        edit: "Edit the category %{title}"
+        new:  "New category"
+      create: "The new category has been saved."
+      update: "The category has been updated."
+      delete: "The category has been deleted."
+      deletebanner: "The banner has been deleted"
+    new: "New wine"
+    create: "A new wine has been saved."
+    update: "A wine has been saved."
+    delete: "The wine has been deleted."
+    view_in_website: "View in website"
+    title:
+      edit: "Edit the wine"
+      new: "New Wines"
+    form:
+      category: "Category"
+      title: "Wine title"
+      options: "Options"

@@ -11,10 +11,10 @@ class Admin::WinesController < ApplicationController
     category = WineCategory.find(params[:wine_category][:id])
     wine = category.wines.new(params[:wine])
     if wine.save
-      flash[:notice] = "A new wine has been saved."
+      flash[:notice] = t(:create, :scope => :wine)
       redirect_to admin_wine_categories_path
     else
-      flash[:warning] = "Something went wrong."
+      flash[:warning] = t(:error)
       redirect_to new_admin_wine_path
     end
   end
@@ -26,17 +26,17 @@ class Admin::WinesController < ApplicationController
   def update
     wine = Wine.find_by_url(params[:id])
     if wine.update_attributes(params[:wine])
-      flash[:notice] = "A wine has been saved."
+      flash[:notice] = t(:update, :scope => :wine)
       redirect_to admin_wine_categories_path
     else
-      flash[:warning] = "Something went wrong."
+      flash[:warning] = t(:error)
       redirect_to edit_admin_wine_path(wine)
     end
   end
 
   def destroy
     Wine.find_by_url(params[:id]).delete
-    flash[:notice] = "The wine has been deleted."
+    flash[:notice] = t(:delete, :scope => :wine)
     redirect_to admin_wine_categories_path
   end
 

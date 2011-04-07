@@ -1,10 +1,10 @@
-%h1 New Wines
+%h1=t(:new,:scope => [:wine,:title])
 
 = form_for [:admin,@wine], :html => { :multipart => true } do |f|
   %p
-    =f.label "Category"
+    =f.label t(:category, :scope => [:wine,:form])
     =collection_select(:wine_category, :id, WineCategory.all, :id, :title)
-    =link_to "new category", new_admin_wine_category_path
+    =link_to t(:new, :scope => [:wine, :category, :title]), new_admin_wine_category_path
   %p
     =f.label :title
     =f.text_field :title
@@ -20,4 +20,4 @@
   %p
     =f.label :body
     =f.ckeditor_textarea("body", :width => '100%', :height => '200px')
-  =f.submit "save"
+  =f.submit t(:save)

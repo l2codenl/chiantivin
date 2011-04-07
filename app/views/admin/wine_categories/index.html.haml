@@ -1,28 +1,28 @@
-%h1 Wines
+%h1=t(:index, :scope => [:wine,:title])
 %ul
-  %li=link_to "New category", new_admin_wine_category_path
-  %li=link_to "New wine", new_admin_wine_path
+  %li=link_to t(:new, :scope => [:wine,:category,:title]), new_admin_wine_category_path
+  %li=link_to t(:new, :scope => [:wine]), new_admin_wine_path
 
 %table
   %tr{:style => "border-bottom: 1px solid #666;"}
-    %th Category
-    %th Wine title
-    %th Options
+    %th=t(:category, :scope => [:wine, :form])
+    %th=t(:title, :scope => [:wine, :form])
+    %th=t(:options, :scope => [:wine, :form])
   - @categories.each do |category|
     %tr
       %td{:style => "width: 180px;"}
         %strong=category.title
       %td
       %td
-        =link_to "Edit", edit_admin_wine_category_path(category)
-        =link_to "Delete", admin_wine_category_path(category), :method => "delete"
+        =link_to t(:edit), edit_admin_wine_category_path(category)
+        =link_to t(:delete), admin_wine_category_path(category), :method => "delete"
     - if category.wines.count > 0 
       - category.wines.each do |wine|
         %tr
           %td=""
           %td=wine.title
           %td
-            =link_to "Edit", edit_admin_wine_path(wine)
-            =link_to "Delete", admin_wine_path(wine), :method => "delete"
+            =link_to t(:edit), edit_admin_wine_path(wine)
+            =link_to t(:delete), admin_wine_path(wine), :method => "delete"
 
 
