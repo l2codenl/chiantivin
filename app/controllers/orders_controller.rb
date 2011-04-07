@@ -4,7 +4,7 @@ class OrdersController < ApplicationController
       order.cart = Cart.includes(:wine).find_all_by_session_id(session_id)
       Notifier.confirm_order(order)
       Notifier.send_to_chianti(order).deliver
-      flash[:notice] = "Your order has succesfully been send"
+      flash[:notice] = t(:create, :scope => :order)
     end
 
     redirect_to success_cart_checkout_path

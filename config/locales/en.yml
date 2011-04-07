@@ -15,6 +15,11 @@ en:
   save: "save"
   edit: "edit"
   delete: "delete"
+  title: "title"
+  quantity: "quantity"
+  options: "options"
+  remove: "remove"
+  checkout: "checkout"
   page:
     new: "new page"
     create: "The new page has been saved."
@@ -43,3 +48,6 @@ en:
       category: "Category"
       title: "Wine title"
       options: "Options"
+  order:
+    create: "Your order has succesfully been send"
+
