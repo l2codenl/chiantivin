@@ -26,7 +26,7 @@ class Admin::WinesController < ApplicationController
   def update
     wine = Wine.find_by_url(params[:id])
     if wine.update_attributes(params[:wine])
-      flash[:notice] = t(:update, :scope => :wine)
+      flash[:notice] = t(:update, :scope => :wine, :title => wine.title)
       redirect_to admin_wine_categories_path
     else
       flash[:warning] = t(:error)

@@ -33,12 +33,12 @@ en:
       deletebanner: "The banner has been deleted"
     new: "New wine"
     create: "A new wine has been saved."
-    update: "A wine has been saved."
+    update: "%{title} has been updated."
     delete: "The wine has been deleted."
     view_in_website: "View in website"
     title:
-      edit: "Edit the wine"
-      new: "New Wines"
+      edit: "Edit the wine %{title}"
+      new: "New Wine"
     form:
       category: "Category"
       title: "Wine title"

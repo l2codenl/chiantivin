@@ -1,10 +1,10 @@
-%h1=t(:edit, :scope => [:wine,:title,:edit],@wine.title)
+%h1=t(:edit, :scope => [:wine,:title], :title => @wine.title)
 
 =link_to t(:view_in_website, :scope => [:wine]), "/wines/#{@wine.url}"
 
 = form_for [:admin,@wine], :html => { :multipart => true } do |f|
   %p
-    =f.label t(:category, :scope => [:wine])
+    =f.label t(:category, :scope => [:wine,:form])
     =collection_select(:wine, :wine_category_id, WineCategory.all, :id, :title)
     =link_to t(:new, :scope => [:wine, :category,:title]), new_admin_wine_category_path
   %p
