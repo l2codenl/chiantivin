@@ -14,7 +14,7 @@ class Admin::PagesController < ApplicationController
   def create
     page = Page.new(params[:page])
     if page.save 
-      flash[:notice] = "The new page has been saved."
+      flash[:notice] = t(:create,:scope => :page)
       redirect_to admin_pages_path
     else
       flash[:warning] = t(:error)
@@ -28,8 +28,8 @@ class Admin::PagesController < ApplicationController
 
   def update
     page = Page.find(params[:id])
-    if page.update_attributes(params[:page]) 
-      flash[:notice] = "The page has been updated."
+    if page.update_attributes(params[:page])
+      flash[:notice] = t(:update, :scope => :page)
       redirect_to admin_pages_path
     else
       flash[:warning] = t(:error)
@@ -40,7 +40,7 @@ class Admin::PagesController < ApplicationController
   def destroy
     page = Page.find(params[:id])
     if page.delete
-      flash[:notice] = "The page has been deleted."
+      flash[:notice] = t(:delete, :scope => :page)
     else
       flash[:warning] = t(:error)
     end
@@ -50,7 +50,7 @@ class Admin::PagesController < ApplicationController
   def remove_banner
     page = Page.find(params[:id])
     page.update_attribute(:banner,nil)
-    flash[:notice] = "The page banner has been deleted"
+    flash[:notice] = t(:deletebanner, :scope => :page)
     redirect_to edit_admin_page_path(page)
   end
 end

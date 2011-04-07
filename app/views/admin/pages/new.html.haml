@@ -9,9 +9,9 @@
     =f.file_field :banner
   - unless @page.banner_file_name.nil?
     %p
-      =link_to "current", @page.banner.url(:banner) 
-      =link_to "delete banner", delete_banner_admin_page_path(@page)
+      =link_to t(:current, :scope => :banner), @page.banner.url(:banner) 
+      =link_to t(:deletebanner, :scope => :banner), delete_banner_admin_page_path(@page)
   %p
     =f.label :body
     =ckeditor_textarea("page", "body", :width => '100%', :height => '200px')
-  =f.submit "save"
+  =f.submit t(:save)"

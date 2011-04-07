@@ -9,3 +9,15 @@ en:
     add: "%{wine} has been added to your cart"
     remove: "%{wine} has been removed from your cart"
     quantity: "You now have %{quantity} times %{wine} in your cart"
+  banner:
+    current: "current"
+    deletebanner: "delete banner"
+  save: "save"
+  edit: "edit"
+  delete: "delete"
+  page:
+    new: "new page"
+    create: "The new page has been saved."
+    update: "The page has been updated."
+    delete: "The page has been deleted."
+    deletebanner: "The page banner has been deleted"
