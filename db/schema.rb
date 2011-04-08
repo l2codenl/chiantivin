@@ -20,14 +20,6 @@ ActiveRecord::Schema.define(:version => 20110407134504) do
     t.integer  "quantity"
   end
 
-  create_table "contacts", :force => true do |t|
-    t.string   "name"
-    t.string   "email"
-    t.text     "body"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "orders", :force => true do |t|
     t.string   "firstname"
     t.string   "surname"
