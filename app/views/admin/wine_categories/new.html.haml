@@ -8,6 +8,9 @@
     =f.label :banner
     =f.file_field :banner
   %p
+    =f.label :portrait
+    =f.file_field :portrait
+  %p
     =f.label :body
     =ckeditor_textarea("wine_category", "body", :width => '100%', :height => '200px')
   =f.submit t(:save)

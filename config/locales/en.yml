@@ -25,6 +25,7 @@ en:
   remove: "remove"
   checkout: "checkout"
   page:
+    homepage: "on homepage?"
     new: "new page"
     create: "The new page has been saved."
     update: "The page has been updated."
@@ -32,6 +33,7 @@ en:
     deletebanner: "The page banner has been deleted"
   wine:
     category:
+      homepage: "on homepage?"
       title: 
         index: "Wines"
         edit: "Edit the category %{title}"

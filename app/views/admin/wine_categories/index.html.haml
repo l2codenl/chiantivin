@@ -1,4 +1,4 @@
-%h1=t(:index, :scope => [:wine,:title])
+%h1=t(:index, :scope => [:wine,:category,:title])
 %ul
   %li=link_to t(:new, :scope => [:wine,:category,:title]), new_admin_wine_category_path
   %li=link_to t(:new, :scope => [:wine]), new_admin_wine_path
@@ -8,6 +8,7 @@
     %th=t(:category, :scope => [:wine, :form])
     %th=t(:title, :scope => [:wine, :form])
     %th=t(:options, :scope => [:wine, :form])
+    %th=t(:homepage, :scope => [:wine, :category])
   - @categories.each do |category|
     %tr
       %td{:style => "width: 180px;"}
@@ -16,6 +17,9 @@
       %td
         =link_to t(:edit), edit_admin_wine_category_path(category)
         =link_to t(:delete), admin_wine_category_path(category), :method => "delete"
+      %td
+        =form_for [:admin, category] do |f|
+          -f.check_box :menu, :class => "addmenu"
     - if category.wines.count > 0 
       - category.wines.each do |wine|
         %tr

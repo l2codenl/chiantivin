@@ -5,9 +5,9 @@
 
 %table
   %tr
-    %th Name
-    %th Options
-    %th On Homepage?
+    %th=t(:name)
+    %th=t(:options)
+    %th=t(:homepage, :scope => [:page])
   - @pages.each do |page|
     %tr
       %td=page.title

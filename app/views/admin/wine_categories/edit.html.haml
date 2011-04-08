@@ -12,6 +12,12 @@
       =link_to t(:current, :scope => :banner), @category.banner.url(:banner) 
       =link_to t(:deletebanner, :scope => :banner), remove_banner_admin_wine_category_path(@category)
   %p
+    =f.label :portrait
+    =f.file_field :portrait
+  - unless @category.portrait_file_name.nil?
+    %p
+      =link_to t(:current, :scope => :banner), @category.portrait.url(:portrait) 
+  %p
     =f.label :body
     =f.cktext_area :body, :toolbar=>'Full', :width=>'100%', :heigth=>'200px'
   =f.submit t(:save)
