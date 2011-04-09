@@ -1,4 +1,7 @@
 = render :partial => "menu/category"
+#category_header
+  - if @current_category.banner_file_name
+    = image_tag @current_category.banner.url(:banner)
 #page.grid_9
   %h1=@wine.title
   - if @wine.image_file_name
