@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110409081759) do
+ActiveRecord::Schema.define(:version => 20110409085009) do
 
   create_table "carts", :force => true do |t|
     t.integer  "wine_id"
@@ -77,10 +77,10 @@ ActiveRecord::Schema.define(:version => 20110409081759) do
     t.text     "body"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "banner_file_name"
-    t.string   "banner_content_type"
-    t.integer  "banner_file_size"
-    t.datetime "banner_updated_at"
+    t.string   "winery_banner_file_name"
+    t.string   "winery_banner_content_type"
+    t.integer  "winery_banner_file_size"
+    t.datetime "winery_banner_updated_at"
   end
 
   create_table "wines", :force => true do |t|

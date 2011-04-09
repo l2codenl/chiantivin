@@ -5,11 +5,11 @@
     =f.label :title
     =f.text_field :title
   %p
-    =f.label :banner
-    =f.file_field :banner
-  - unless @winery.banner_file_name.nil?
+    =f.label :winery_banner
+    =f.file_field :winery_banner
+  - unless @winery.winery_banner_file_name.nil?
     %p
-      =link_to t(:current, :scope => :banner), @winery.banner.url(:banner) 
+      =link_to t(:current, :scope => :banner), @winery.winery_banner.url(:banner) 
       =link_to t(:deletebanner, :scope => :banner), remove_banner_admin_winery_path(@winery)
   %p
     =f.label :body

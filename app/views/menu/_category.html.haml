@@ -3,9 +3,13 @@
     -WineCategory.all.each do |category|
       %li
         =link_to category.title, "/wines/category/"+category.url
-        -if !@current_category.nil? && @current_category == category.id
+        -if !@current_category.nil? && @current_category == category
           %ul
-            -Wine.find_all_by_wine_category_id(category.id).each do |wine|
+            -category.wines.each do |wine|
               %li
                 =link_to wine.title, "/wines/"+wine.url
-
+    %li
+      =t(:wineries, :scope => [:wine, :winery])
+      %ul
+        -Winery.all.each do |winery|
+          %li=link_to winery.title, winery_path(winery)

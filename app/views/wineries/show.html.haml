@@ -1,0 +1,14 @@
+= render :partial => "menu/category"
+#page.grid_9
+  %h1==#{@winery.title}
+  - if @winery.winery_banner_file_name
+    = image_tag @winery.winery_banner.url(:banner)
+  =raw(@winery.body)
+  %h2 Wines
+  - @wines.each do |wine|
+    %div{:id => [wine.url], :class => "shopitem"}
+      .productimage
+        - if wine.image_file_name
+          =link_to image_tag(wine.image.url(:image)),"/wines/#{wine.url}"
+      .producttext
+        =link_to wine.title, "/wines/#{wine.url}"

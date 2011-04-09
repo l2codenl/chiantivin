@@ -10,12 +10,14 @@
       #navigation
         %ul
           %li
-            =link_to "Webshop", wines_path 
+            =link_to t(:webshop, :scope => :menu), wines_path 
+          %li
+            =link_to t(:wineries, :scope => :menu), wineries_path 
           -@menu.each do |menu|
             %li
               =link_to menu.title, menu.url
           %li
-            =link_to "Kontakt", contact_path 
+            =link_to t(:contact, :scope => :menu), contact_path 
       #main
         #flash
           - unless flash[:notice].nil?

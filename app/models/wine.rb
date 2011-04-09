@@ -3,8 +3,8 @@ class Wine < ActiveRecord::Base
   validates_attachment_content_type :image, :content_type => ['image/jpeg', 'image/png']
   validates_presence_of :title, :wine_category_id
 
-  belongs_to :wine_categories
-  belongs_to :wineries
+  belongs_to :wine_category
+  belongs_to :winery
 
   before_save :save_title_to_url
 

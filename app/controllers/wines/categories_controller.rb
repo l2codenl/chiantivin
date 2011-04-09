@@ -6,6 +6,6 @@ class Wines::CategoriesController < ApplicationController
     else
       @wines = @category.wines.all
     end
-    @current_category = @category.id
+    @current_category = @category
   end
 end

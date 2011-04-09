@@ -4,6 +4,10 @@
 en:
   welcome: "Welcome."
   error: "Something went wrong."
+  menu:
+    webshop: "Webshop"
+    contact: "Kontakt"
+    wineries: "Vingarde"
   cart:
     anotheradd: "Another %{wine} has been added to your cart"
     add: "%{wine} has been added to your cart"
@@ -46,6 +50,7 @@ en:
       new: "New winery"
       list: "Wineries"
       winery: "Winery"
+      wineries: "Wineries"
       title:
         index: "Wineries"
         new: "New winery"

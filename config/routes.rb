@@ -43,6 +43,7 @@ Chianti::Application.routes.draw do
   resources :wines do
     resource :cart
   end
+  resources :wineries
 
   resource :contact
 
