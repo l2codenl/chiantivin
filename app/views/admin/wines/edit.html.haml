@@ -8,6 +8,10 @@
     =collection_select(:wine, :wine_category_id, WineCategory.all, :id, :title)
     =link_to t(:new, :scope => [:wine, :category,:title]), new_admin_wine_category_path
   %p
+    =f.label t(:winery, :scope => [:wine,:form])
+    =collection_select(:wine, :winery_id, Winery.all, :id, :title, :include_blank => true)
+    =link_to t(:new, :scope => [:wine,:winery]), new_admin_winery_path
+  %p
     =f.label :title
     =f.text_field :title
   %p

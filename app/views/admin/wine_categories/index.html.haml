@@ -2,6 +2,7 @@
 %ul
   %li=link_to t(:new, :scope => [:wine,:category,:title]), new_admin_wine_category_path
   %li=link_to t(:new, :scope => [:wine]), new_admin_wine_path
+  %li=link_to t(:list, :scope => [:wine,:winery]), admin_wineries_path
 
 %table
   %tr{:style => "border-bottom: 1px solid #666;"}

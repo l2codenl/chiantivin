@@ -42,6 +42,18 @@ en:
       update: "The category has been updated."
       delete: "The category has been deleted."
       deletebanner: "The banner has been deleted"
+    winery:
+      new: "New winery"
+      list: "Wineries"
+      winery: "Winery"
+      title:
+        index: "Wineries"
+        new: "New winery"
+        edit: "Edit the winery %{title}"
+      create: "The new winery has been saved."
+      update: "The winery has been updated."
+      delete: "The winery has been deleted."
+      deletebanner: "The winery banner has been deleted."
     new: "New wine"
     create: "A new wine has been saved."
     update: "%{title} has been updated."
@@ -52,6 +64,7 @@ en:
       new: "New Wine"
     form:
       category: "Category"
+      winery: "Winery"
       title: "Wine title"
       options: "Options"
   order:

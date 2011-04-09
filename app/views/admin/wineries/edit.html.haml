@@ -1,0 +1,17 @@
+%h1=t(:edit, :scope => [:wine,:winery,:title], :title => @winery.title)
+
+= form_for [:admin,@winery], :html => { :multipart => true } do |f|
+  %p
+    =f.label :title
+    =f.text_field :title
+  %p
+    =f.label :banner
+    =f.file_field :banner
+  - unless @winery.banner_file_name.nil?
+    %p
+      =link_to t(:current, :scope => :banner), @winery.banner.url(:banner) 
+      =link_to t(:deletebanner, :scope => :banner), remove_banner_admin_winery_path(@winery)
+  %p
+    =f.label :body
+    =f.cktext_area :body, :toolbar=>'Full', :width=>'100%', :heigth=>'200px'
+  =f.submit t(:save)

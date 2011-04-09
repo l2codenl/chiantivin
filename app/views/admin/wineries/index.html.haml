@@ -1,0 +1,28 @@
+%h1=t(:index, :scope => [:wine,:winery,:title])
+
+%ul
+  %li=link_to t(:new, :scope => [:wine,:winery]), new_admin_winery_path
+
+%table
+  %tr{:style => "border-bottom: 1px solid #666;"}
+    %th=t(:winery, :scope => [:wine, :winery])
+    %th=t(:title, :scope => [:wine, :form])
+    %th=t(:options, :scope => [:wine, :form])
+  - @wineries.each do |winery|
+    %tr
+      %td{:style => "width: 180px;"}
+        %strong=winery.title
+      %td
+      %td
+        =link_to t(:edit), edit_admin_winery_path(winery)
+        =link_to t(:delete), admin_winery_path(winery), :method => "delete"
+    - if winery.wines.count > 0 
+      - winery.wines.each do |wine|
+        %tr
+          %td=""
+          %td=wine.title
+          %td
+            =link_to t(:edit), edit_admin_wine_path(wine)
+            =link_to t(:delete), admin_wine_path(wine), :method => "delete"
+
+

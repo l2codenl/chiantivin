@@ -8,6 +8,11 @@ Chianti::Application.routes.draw do
       end
       resources :wines
     end
+    resources :wineries do
+      member do
+        get 'remove_banner'
+      end
+    end
 
     resources :pages do
       member do
