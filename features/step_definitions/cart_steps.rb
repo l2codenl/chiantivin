@@ -1,4 +1,5 @@
 Given /^there is a wine$/ do
+  @category = Factory.create(:wine_category)
   @wine = Factory.create(:wine)
 end
 
