@@ -4,6 +4,7 @@
 $(document).ready(function(){
   cart_check_for_quantity_update();
   page_toggle_menu();
+  go_home();
 });
 
 function cart_check_for_quantity_update(){
@@ -15,5 +16,11 @@ function cart_check_for_quantity_update(){
 function page_toggle_menu(){
   $('.addmenu').change(function(){
     $(this).parent('form').submit();
+  });
+}
+
+function go_home(){
+  $('#header').click(function(){
+    window.location = '/';
   });
 }

@@ -11,4 +11,5 @@
         - if wine.image_file_name
           =link_to image_tag(wine.image.url(:image)),"/wines/#{wine.url}"
       .producttext
-        =link_to wine.title, "/wines/#{wine.url}"
+        =raw(truncate(wine.body, :length => 40))
+        =link_to t(:readmore), "/wines/#{wine.url}"

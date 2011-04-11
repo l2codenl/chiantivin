@@ -7,6 +7,7 @@ body, html{
 #header{
 	background: transparent url(../images/logo.png) no-repeat right;
 	height: 60px;
+  cursor: pointer;
 }
 
 #navigation{
@@ -34,7 +35,6 @@ body, html{
 	padding: 5px 0px 5px 0px;
 	box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
 	margin: 10px 0px 10px 0px;
-	behavior: url(path/to/PIE.htc);
 }
 
 #contextnavigation{
@@ -77,7 +77,6 @@ body, html{
 	width: 270px;
 	height: 140px;
 	border: 1px solid black;
-	box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
 	margin: 10px;
 }
 
@@ -87,6 +86,20 @@ body, html{
 
 .shopitem .text{
 
+}
+
+#cart
+{
+  width: 100%;
+  text-align: left;
+  text-transform: capitalize;
+}
+
+#cart th.quantity{
+  width: 60px;
+}
+#cart th.options{
+  width: 200px;
 }
 
 /*lists*/
@@ -174,6 +187,48 @@ p{
 
 /*input*/
 
+	form p{
+		margin: 5px 0px;
+	}
+form p label{
+	width: 80px;
+	display: block;
+	float: left;
+	padding: 4px 0px;
+}
+	
+form p input{
+	width: 150px;
+	height: 20px;
+	display: block;
+	border: 2px #999 solid;
+	padding: 4px;
+}
+
+ form p textarea{
+	width: 200px;
+	display: block;
+	border: 2px #999 solid;
+	height: 100px;
+}
+
+input[type="button"], input[type="submit"] {
+    background: url("../images/bg-button.png") repeat-x scroll 0 50% #555;
+    border: 0 none!important;
+    border-radius: 3px 3px 3px 3px;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: Georgia,"Times New Roman",serif;
+    font-size: 1.3em;
+    font-weight: bold;
+    padding: 6px 2px!important;
+    width: 100px!important;
+	height: 35px!important;
+}
+
+input[type="submit"]:hover{
+	background-color: #333;
+}
 
 /*links*/
 

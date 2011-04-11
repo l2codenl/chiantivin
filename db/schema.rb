@@ -20,14 +20,6 @@ ActiveRecord::Schema.define(:version => 20110409085009) do
     t.integer  "quantity"
   end
 
-  create_table "contacts", :force => true do |t|
-    t.string   "name"
-    t.string   "email"
-    t.text     "body"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "orders", :force => true do |t|
     t.string   "firstname"
     t.string   "surname"
@@ -77,10 +69,6 @@ ActiveRecord::Schema.define(:version => 20110409085009) do
     t.text     "body"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "banner_file_name"
-    t.string   "banner_content_type"
-    t.integer  "banner_file_size"
-    t.datetime "banner_updated_at"
     t.string   "winery_banner_file_name"
     t.string   "winery_banner_content_type"
     t.integer  "winery_banner_file_size"
