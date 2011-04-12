@@ -187,25 +187,28 @@ p{
 
 /*input*/
 
-	form p{
+	form{
 		margin: 5px 0px;
 	}
-form p label{
-	width: 80px;
+form label{
+	width: 120px;
 	display: block;
 	float: left;
 	padding: 4px 0px;
 }
-	
-form p input{
+form div{
+  clear: both;
+}	
+form input{
 	width: 150px;
 	height: 20px;
 	display: block;
 	border: 2px #999 solid;
 	padding: 4px;
+  float: left;
 }
 
- form p textarea{
+ form textarea{
 	width: 200px;
 	display: block;
 	border: 2px #999 solid;
@@ -275,4 +278,13 @@ input[type="submit"]:hover{
 	-webkit-border-radius: 3px;
 	border-radius: 3px;
   margin: 0 7px;
+}
+
+label.error{
+  float: left;
+  font-size: 0.8em;  
+}
+
+input.error{
+  border: red 2px solid;
 }

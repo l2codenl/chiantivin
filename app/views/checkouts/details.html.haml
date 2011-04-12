@@ -1,25 +1,27 @@
-%h1 Details
-
-= form_for [:cart,:checkout,@order] do |f|
-  %p
-    =f.label :firstname
-    =f.text_field :firstname
-  %p
-    =f.label :surname
-    =f.text_field :surname
-  %p
-    =f.label :address
-    =f.text_field :address
-  %p
-    =f.label :postalcode
-    =f.text_field :postalcode
-  %p
-    =f.label :email
-    =f.email_field :email
-  %p
-    =f.label :accountnumber
-    =f.text_field :accountnumber
-  %p
-    =f.label :accountowner
-    =f.text_field :accountowner
-  =f.submit "Submit"
+#contextmenu
+#page.grid_9
+  %h1 Details
+  #order
+    = form_for [:cart,:checkout,@order] do |f|
+      %div
+        =f.label :firstname
+        =f.text_field :firstname
+      %div
+        =f.label :surname
+        =f.text_field :surname
+      %div
+        =f.label :address
+        =f.text_field :address
+      %div
+        =f.label :postalcode
+        =f.text_field :postalcode
+      %div
+        =f.label :email
+        =f.text_field :email
+      %div
+        =f.label :accountnumber
+        =f.text_field :accountnumber
+      %div
+        =f.label :accountowner
+        =f.text_field :accountowner
+      =f.submit "Submit"

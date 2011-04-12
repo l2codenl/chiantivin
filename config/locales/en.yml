@@ -76,6 +76,7 @@ en:
       options: "Options"
   order:
     create: "Your order has succesfully been send"
+    error: "Something went wrong."
   contact:
     success: "We've received your message. Thank you and we'll get back to you as soon as possible."
     fail: "Something went wrong. All fields are required."

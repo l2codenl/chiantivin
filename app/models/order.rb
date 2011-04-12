@@ -1,8 +1,10 @@
 class Order < ActiveRecord::Base
   before_create :add_ordernumber
-
-
-  validates_presence_of :firstname, :surname, :email, :postalcode, :accountnumber, :accountowner
+  validates_presence_of :firstname, :surname, :email, :address, :postalcode, :accountnumber, :accountowner
+  validates :email, :presence => true, 
+                    :length => {:minimum => 3, :maximum => 254},
+                    :uniqueness => true,
+                    :format => {:with => /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i}
 
   attr_accessor :cart
 

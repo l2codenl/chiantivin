@@ -1,10 +1,8 @@
-// Place your application-specific JavaScript functions and classes here
-// This file is automatically included by javascript_include_tag :defaults
-
 $(document).ready(function(){
   cart_check_for_quantity_update();
   page_toggle_menu();
   go_home();
+  //validate_order();
 });
 
 function cart_check_for_quantity_update(){
@@ -24,3 +22,18 @@ function go_home(){
     window.location = '/';
   });
 }
+
+function validate_order(){
+  $("#new_order").validate({
+    debug: true,
+    rules: {
+      "order[email]": {required: true, email: true },
+      "order[postalcode]": {required: true},
+      "order[accountnumber]": {required: true},
+      "order[accountowner]": {required: true},
+      "order[address]": {required: true},
+      "order[surname]": {required: true},
+      "order[firstname]": {required: true}
+    }
+  });
+} 

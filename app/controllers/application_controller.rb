@@ -7,11 +7,12 @@ class ApplicationController < ActionController::Base
   end
 
   def authorize
-    redirect_to login_admin_index_path unless admin?
+      redirect_to login_admin_index_path unless admin?
   end
 
   def menu_pages
     @menu = Page.find_all_by_menu(true)
   end
+
 
 end
