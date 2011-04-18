@@ -3,13 +3,13 @@
   %h1=t(:title, :scope => :contact)
   %p=t(:text, :scope => :contact)
   = form_tag( contact_path ) do
-    %p
+    %div
       =label_tag "contact_name", t(:name)
       =text_field_tag "contact[name]"
-    %p
+    %div
       =label_tag "contact_email", t(:email)
       =email_field_tag "contact[email]"
-    %p
+    %div
       =label_tag "contact_body", t(:question, :scope => :contact)
       =text_area_tag "contact[body]"
     =submit_tag t(:submit)
