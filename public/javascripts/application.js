@@ -2,7 +2,7 @@ $(document).ready(function(){
   cart_check_for_quantity_update();
   page_toggle_menu();
   go_home();
-  //validate_order();
+  validate_order();
 });
 
 function cart_check_for_quantity_update(){
@@ -35,5 +35,12 @@ function validate_order(){
       "order[surname]": {required: true},
       "order[firstname]": {required: true}
     }
+    unhighlight: function( element, errorClass, validClass ) {
+    $(element).removeClass(errorClass).addClass(validClass);
+    if(validator.numberOfInvalids() == 0){
+        $("#SubmitButton").attr("disabled","");
+    }
+    }
+
   });
 } 
