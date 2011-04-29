@@ -77,6 +77,8 @@ en:
   order:
     create: "Your order has succesfully been send"
     error: "Something went wrong."
+    email_error: "You have to fill in a valid email adress"
+    value_error: "All fields are required."
   contact:
     success: "We've received your message. Thank you and we'll get back to you as soon as possible."
     fail: "Something went wrong. All fields are required."

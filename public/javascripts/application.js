@@ -24,8 +24,7 @@ function go_home(){
 }
 
 function validate_order(){
-  $("#new_order").validate({
-    debug: true,
+  var validator = $("#new_order").validate({
     rules: {
       "order[email]": {required: true, email: true },
       "order[postalcode]": {required: true},
@@ -35,12 +34,5 @@ function validate_order(){
       "order[surname]": {required: true},
       "order[firstname]": {required: true}
     }
-    unhighlight: function( element, errorClass, validClass ) {
-    $(element).removeClass(errorClass).addClass(validClass);
-    if(validator.numberOfInvalids() == 0){
-        $("#SubmitButton").attr("disabled","");
-    }
-    }
-
   });
 } 

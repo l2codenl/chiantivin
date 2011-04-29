@@ -94,3 +94,49 @@ a:hover{
   clear: both;
   padding: 5px;
 }
+
+		
+form{
+		margin: 5px 0px;
+	}
+form label{
+  vertical-align: center;
+	padding: 12px 0px;
+}
+form input{
+	height: 20px;
+	padding: 4px;
+  margin: 5px 0 5px 0;
+}
+
+ form textarea{
+	border: 2px #999 solid;
+	height: 100px;
+}
+
+input[type="button"], input[type="submit"] {
+    border: 1px solid;!important;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: Georgia,"Times New Roman",serif;
+    font-size: 1.3em;
+    font-weight: bold;
+    padding: 6px 2px!important;
+    width: 100px!important;
+  	height: 35px!important;
+}
+input[type="file"] {
+    border: 1px solid;!important;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: Georgia,"Times New Roman",serif;
+    font-size: 1.3em;
+    font-weight: bold;
+    padding: 6px 2px!important;
+    width: 100px!important;
+  	height: 35px!important;
+}
+input[type="submit"]:hover{
+	background-color: #333;
+}
+	
