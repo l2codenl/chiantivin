@@ -17,7 +17,7 @@ class Notifier < ActionMailer::Base
 
   def contact_form contact
     @contact = contact
-    mail(:from => "#{contact[:name]} <#{contact[:email]}>", :to => "Chiantivin Import <info@chiantivinimport.dk>",:subject => "Contact request by #{contact[:name]}") do |format|
+    mail(:from => "#{contact[:name]} <#{contact[:email]}>", :to => "Chiantivin Import <contact@chiantivinimport.dk>",:subject => "Contact request by #{contact[:name]}") do |format|
       format.html
     end
   end
