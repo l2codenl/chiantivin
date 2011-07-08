@@ -4,7 +4,7 @@ class WinesController < ApplicationController
   end
 
   def show
-    @wine = Wine.find_by_url!(params[:id])
+    @wine = WineCategory.find_by_url(params[:category]).wines.find_by_url!(params[:id])
     @current_category = @wine.wine_category
   end
 

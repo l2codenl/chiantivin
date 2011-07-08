@@ -1,7 +1,9 @@
 Chianti::Application.routes.draw do
 
   namespace :admin do
-    resources :wines
+    resources :wines do
+    end
+
     resources :wine_categories do
       member do
         get 'remove_banner'
@@ -39,6 +41,7 @@ Chianti::Application.routes.draw do
   end
 
   match '/wines/category/:title', :controller => "wines/categories", :action => :show
+  match '/wines/:category(/:id)', :to => 'wines#show'
 
   resources :wines do
     resource :cart

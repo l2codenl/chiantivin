@@ -15,7 +15,7 @@
             =link_to t(:wineries, :scope => :menu), wineries_path 
           -@menu.each do |menu|
             %li
-              =link_to menu.title, menu.url
+              =link_to menu.title, "/#{menu.url}"
           %li
             =link_to t(:contact, :scope => :menu), contact_path 
       #main
