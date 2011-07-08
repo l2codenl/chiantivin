@@ -1,6 +1,8 @@
 class WineriesController < ApplicationController
   def index
-    redirect_to winery_path(Winery.first)
+    if !Winery
+      redirect_to winery_path(Winery.first)
+    end
   end
 
   def show

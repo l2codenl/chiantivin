@@ -4,6 +4,15 @@ body, html{
 
 /*blocks*/
 
+/*LINKS*/
+a{
+  color: #3151A2;
+}
+
+a:hover{
+  color: #C00;
+}
+
 #header{
 	background: transparent url(../images/logo.png) no-repeat right;
 	height: 60px;
@@ -86,6 +95,19 @@ body, html{
 
 .shopitem .text{
 
+}
+
+#checkout{
+  width: 300px; 
+  text-align: left;
+}
+
+#checkout th{
+  font-weight: bold;
+  border-bottom: 1px solid black;
+}
+.first_column{
+  width: 100px;
 }
 
 #cart
@@ -246,7 +268,7 @@ input[type="submit"]:hover{
 	color: #797979;
 }
 
-#contextnavigation a{
+/*#contextnavigation a{
 	color: #000;
 	text-decoration: none;
 }
@@ -254,7 +276,7 @@ input[type="submit"]:hover{
 #contextnavigation a:hover{
 	color: #797979;
 }
-
+*/
 /*misc*/
 .notice{
   color: #3CCF52;
