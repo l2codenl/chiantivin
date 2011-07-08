@@ -7,7 +7,7 @@
           %ul
             -category.wines.each do |wine|
               %li
-                =link_to wine.title, "/wines/"+wine.url
+                =link_to wine.title, "/wines/#{category.url}/#{wine.url}"
     %li
       =t(:wineries, :scope => [:wine, :winery])
       %ul
