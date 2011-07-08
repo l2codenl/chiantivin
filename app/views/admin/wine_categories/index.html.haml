@@ -27,7 +27,7 @@
           %td=""
           %td=wine.title
           %td
-            =link_to t(:edit), edit_admin_wine_path(wine)
-            =link_to t(:delete), admin_wine_path(wine), :method => "delete"
+            =link_to t(:edit), edit_admin_wine_path(wine.id)
+            =link_to t(:delete), admin_wine_path(wine.id), :method => "delete"
 
 

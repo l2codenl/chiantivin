@@ -20,11 +20,11 @@ class Admin::WinesController < ApplicationController
   end
 
   def edit
-    @wine = Wine.find_by_url(params[:id])
+    @wine = Wine.find(params[:id])
   end
 
   def update
-    wine = Wine.find_by_url(params[:id])
+    wine = Wine.find(params[:id])
     if wine.update_attributes(params[:wine])
       flash[:notice] = t(:update, :scope => :wine, :title => wine.title)
       redirect_to admin_wine_categories_path
@@ -35,7 +35,7 @@ class Admin::WinesController < ApplicationController
   end
 
   def destroy
-    Wine.find_by_url(params[:id]).delete
+    Wine.find(params[:id]).delete
     flash[:notice] = t(:delete, :scope => :wine)
     redirect_to admin_wine_categories_path
   end

@@ -1,6 +1,7 @@
 %h1=t(:edit, :scope => [:wine,:category,:title], :title => @category.title)
 
 = form_for [:admin,@category], :html => { :multipart => true } do |f|
+  =f.hidden :id
   %p
     =f.label :title
     =f.text_field :title
