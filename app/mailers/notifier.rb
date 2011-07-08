@@ -10,7 +10,7 @@ class Notifier < ActionMailer::Base
 
   def send_to_chianti order
     @order = order
-    mail(:to => "Chiantivin Import <shop@chiantivinimport.dk>", :subject => "New order") do |format|
+    mail(:to => "Chiantivin Import <contact@chiantivinimport.dk>", :subject => "New order") do |format|
       format.html
     end
   end
