@@ -40,12 +40,13 @@ Chianti::Application.routes.draw do
     end
   end
 
-  match '/wines/category/:title', :controller => "wines/categories", :action => :show
-  match '/wines/:category(/:id)', :to => 'wines#show'
-
   resources :wines do
     resource :cart
   end
+
+  match '/wines/category/:title', :controller => "wines/categories", :action => :show
+  match '/wines/:category(/:id)', :to => 'wines#show'
+
   resources :wineries
 
   resource :contact
