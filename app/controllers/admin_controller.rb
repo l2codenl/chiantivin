@@ -1,6 +1,5 @@
 class AdminController < ApplicationController
   before_filter :authorize, :only => "index"
-
   def index
   end
 
@@ -17,4 +16,4 @@ class AdminController < ApplicationController
       redirect_to login_admin_index_path
     end
   end
-end
+ end

@@ -1,0 +1,8 @@
+%h1 Users
+%ul
+- @users.each do |user|
+  %li
+    =user.email
+    =link_to "Delete user", :action => "destroy", :controller => "admin/users", :id => user.id
+
+=link_to "New user", new_admin_user_path

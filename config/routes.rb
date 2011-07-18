@@ -1,6 +1,19 @@
 Chianti::Application.routes.draw do
 
+  #get "sessions/new"
+
+  #get "users/new"
+
   namespace :admin do
+    resources :users do
+    end
+    resources :sessions do
+    end
+    get "log_out" => "sessions#destroy", :as => "log_out"
+    get "log_in" => "sessions#new", :as => "log_in"
+    get "sign_up" => "users#new", :as => "sign_up"
+
+
     resources :wines do
     end
 
@@ -30,7 +43,7 @@ Chianti::Application.routes.draw do
     end
   end
 
-  resource :cart do 
+  resource :cart do
     resource :checkout do
       member do
         get :details

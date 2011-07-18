@@ -8,6 +8,7 @@ gem 'ckeditor'
 gem 'paperclip'
 gem 'rmagick'
 gem 'i18n'
+gem "bcrypt-ruby", :require => "bcrypt"
 
 group :development, :test do
   gem 'ruby-debug'
