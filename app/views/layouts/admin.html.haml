@@ -8,6 +8,10 @@
   %body
     #header
       %h1 Chianti Vinimport Dashboard
+      #user_box
+        - if current_user
+          %p="Logged in as #{current_user.email}"
+          = link_to "Log out", admin_log_out_path
     #container
       #flash
         - unless flash[:notice].nil?
@@ -25,9 +29,6 @@
           %li=link_to  "Wines", admin_wine_categories_path
           %li=link_to  "Users", admin_users_path
       #content.grid_9
-        - if current_user
-          %p="Logged in as #{current_user.email}"
-          = link_to "Log out", admin_log_out_path
         =yield
       .clear
     #footer
