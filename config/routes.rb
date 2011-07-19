@@ -59,7 +59,6 @@ Chianti::Application.routes.draw do
 
   match '/wines/category/:title', :controller => "wines/categories", :action => :show
   match '/wines/:category(/:id)', :to => 'wines#show'
-
   resources :wineries
 
   resource :contact

@@ -1,6 +1,6 @@
 class WineCategory < ActiveRecord::Base
   has_attached_file :banner, :styles => { :banner => "550x148>" }
-  has_attached_file :portrait, :styles => { :portrait => "169x290>" }
+  has_attached_file :portrait, :styles => { :portrait => "169x290>" }, :default_url => "/images/missing.png"
   validates_presence_of :title, :body
   validates_attachment_content_type :banner, :content_type => ['image/jpeg', 'image/png']
   validates_attachment_content_type :portrait, :content_type => ['image/jpeg', 'image/png']
